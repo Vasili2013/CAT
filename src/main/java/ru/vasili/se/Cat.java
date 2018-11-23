@@ -61,7 +61,7 @@ class Main {
 
         for (Cat cat : arrCats) {
             cat.eat(p);
-            p.info();
+            cat.info();
         }
         p.info();
         p.addFood(100);
