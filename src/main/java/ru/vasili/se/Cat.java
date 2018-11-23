@@ -34,11 +34,13 @@ public class Cat {
         this.appetite = appetite;
         this.satiety = true;
     }
+
     public void info() {
         System.out.println(name + " Хочет кушать " + appetite + ".\n" + name + " кушает.");
         String isHungry = !satiety ? " наелся" : " остается голодным,т.к. в тарелке мало еды.";
         System.out.println(name + isHungry);
     }
+
     public void eat(Plate p) {
         if (satiety == true && p.decreaseFood(appetite) == true) {
             satiety = false;
@@ -46,6 +48,7 @@ public class Cat {
         System.out.println("=====================================");
     }
 }
+
 class Main {
     public static void main(String[] args) {
         Cat[] arrCats = new Cat[5];
